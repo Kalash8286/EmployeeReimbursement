@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.cognizant"},{"l":"com.cognizant.configuration"},{"l":"com.cognizant.controller"},{"l":"com.cognizant.dto"},{"l":"com.cognizant.entities"},{"l":"com.cognizant.exception"},{"l":"com.cognizant.repositories"},{"l":"com.cognizant.services.Impl"}];updateSearchResults();

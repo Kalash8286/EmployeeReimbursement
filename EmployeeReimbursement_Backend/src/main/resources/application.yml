@@ -1,0 +1,12 @@
+spring: 
+  application:
+    name: EmployeeReimbursement
+  datasource: 
+    username: sa
+    url: jdbc:h2:mem:EmployeeReimbursementDB
+    driver-class-name: org.h2.Driver
+  jpa: 
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update

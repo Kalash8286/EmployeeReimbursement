@@ -1,0 +1,9 @@
+com.cognizant
+com.cognizant.configuration
+com.cognizant.controller
+com.cognizant.dto
+com.cognizant.entities
+com.cognizant.exception
+com.cognizant.repositories
+com.cognizant.services
+com.cognizant.services.Impl

@@ -1,0 +1,43 @@
+<div class="container">
+
+	<div class="error-msg" *ngIf="showError;"> {{ showError }} </div>
+	
+	<div class="row">
+		<input #travelRequestId class="col-sm-6" type="number" placeholder="Enter Travel Request Id"
+			name="travelRequestId" />
+		<button class="btn btn-primary mx-2 col-sm-3" (click)="fetchReimbursementsList(travelRequestId.value)"> Get
+			Reimbursements </button>
+
+		<table class="table table-striped my-3">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">TravelRequestId</th>
+					<th scope="col">RequestDate</th>
+					<th scope="col">ReimbursementType</th>
+					<th scope="col">InvoiceNo</th>
+					<th scope="col">InvoiceDate</th>
+					<th scope="col">InvoiceAmount</th>
+					<th scope="col">Status</th>
+					<th scope="col">Remark</th>
+					<th scope="col">Process Request</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let reimbursement of reimbursementsList">
+					<td> {{ reimbursement.id }} </td>
+					<td> {{ reimbursement.travelRequestId }} </td>
+					<td> {{ reimbursement.requestDate | date : 'dd-MMM-yyyy' }} </td>
+					<td> {{ reimbursement.reimbursementType.type }} </td>
+					<td> {{ reimbursement.invoiceNo }} </td>
+					<td> {{ reimbursement.invoiceDate | date : 'dd-MMM-yyyy' }} </td>
+					<td> {{ reimbursement.invoiceAmount }} </td>
+					<td> {{ reimbursement.status | titlecase }} </td>
+					<td> {{ reimbursement.remark }} </td>
+					<td> <button class="btn btn-warning" [routerLink]="['/process-reimbursement', reimbursement.id]" [disabled]="reimbursement.status!='new'"> Process </button> </td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="success-msg" *ngIf="showSuccess;">Request Updated Sucessfully!</div>
+    <div class="error-msg" *ngIf="showError;"> {{ showError }} </div>
+
+
+    <table class="table my-3">
+        <tr>
+            <th scope="col">#</th>
+            <td>{{ reimbursement.id }}</td>
+        </tr>
+        <tr>
+            <th scope="col">TravelRequestId</th>
+            <td>{{ reimbursement.travelRequestId }}</td>
+        </tr>
+        <tr>
+            <th scope="col">RequestDate</th>
+            <td>{{ reimbursement.requestDate | date: 'dd-MMM-yyyy' }}</td>
+        </tr>
+        <tr>
+            <th scope="col">ReimbursementType</th>
+            <td>{{ reimbursement.reimbursementType.type }}</td>
+        </tr>
+        <tr>
+            <th scope="col">InvoiceNo</th>
+            <td>{{ reimbursement.invoiceNo }}</td>
+        </tr>
+        <tr>
+            <th scope="col">InvoiceDate</th>
+            <td>{{ reimbursement.invoiceDate | date: 'dd-MMM-yyyy' }}</td>
+        </tr>
+        <tr>
+            <th scope="col">InvoiceAmount</th>
+            <td>{{ reimbursement.invoiceAmount }}</td>
+        </tr>
+        <tr>
+            <th scope="col">Status</th>
+            <td>
+                <input [(ngModel)]="selectedStatus" class="form-check-input" type="radio" name="status" id="accept"
+                    value="approved"> Accept
+                <input [(ngModel)]="selectedStatus" class="form-check-input" type="radio" name="status" id="reject"
+                    value="rejected"> Reject
+            </td>
+        </tr>
+        <tr>
+            <th scope="col">Remark</th>
+            <td><textarea [(ngModel)]="remark" type="text" placeholder="Enter Remark, if Status is Rejected"></textarea>
+            </td>
+        </tr>
+    </table>
+
+    <button class="btn btn-success" (click)="updateRequest()"> Update</button>
+    <button class="btn btn-warning" (click)="goBack()"> Back</button>
+</div>

@@ -1,0 +1,9 @@
+com.example
+com.example.configuration
+com.example.controller
+com.example.dto
+com.example.entities
+com.example.exception
+com.example.repositories
+com.example.services
+com.example.services.Impl

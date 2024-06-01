@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="text-danger text-center" style="font-size: 25px; font-style: italic;" *ngIf="showError"> {{ showError }} </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+        <div class="row">
+            <div class="col-sm-6">
+                <label> Username</label>
+                <input ngModel type="text" class="form-control" name="username" placeholder="Enter Username" />
+            </div>
+            <div class="col-sm-6"></div>
+
+            <div class="col-sm-6 mt-2">
+                <label> Password</label>
+                <input ngModel type="password" class="form-control" name="password" placeholder="Enter Password" />
+            </div>
+            <div class="col-sm-6"></div>            
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Login</button>
+    </form>
+</div>

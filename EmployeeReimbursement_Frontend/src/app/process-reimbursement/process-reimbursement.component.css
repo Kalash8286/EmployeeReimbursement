@@ -1,0 +1,19 @@
+th, td{
+    width: 20%;
+}
+tr{
+    border-bottom: 1px solid #d3c2c2;
+}
+.success-msg{
+    font-size: 20px;
+    font-weight: 800;
+    color: green;
+    font-style: italic;
+}
+
+.error-msg{
+    font-size: 20px;
+    font-weight: 800;
+    color: red;
+    font-style: italic;
+}

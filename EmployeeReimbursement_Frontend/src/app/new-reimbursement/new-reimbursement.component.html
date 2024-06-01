@@ -1,0 +1,86 @@
+<div class="success-msg" *ngIf="showSuccess;">Request Updated Sucessfully!</div>
+<div class="error-msg" *ngIf="showError;"> {{ showError }} </div>
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="requestRaisedByEmployeeId">Enter Employee Id </label>
+                <input [(ngModel)]="newRequest.requestRaisedByEmployeeId" class="form-control" type="number"
+                    id="requestRaisedByEmployeeId" name="requestRaisedByEmployeeId" placeholder="Employee Id" />
+            </div>
+
+            <div class="col-sm-4">
+                <label for="travelRequestId">Enter Travel Request Id </label>
+                <input [(ngModel)]="newRequest.travelRequestId" class="form-control" type="number" id="travelRequestId"
+                    name="travelRequestId" placeholder="Travel Request Id" />
+            </div>
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="reimbursementTypeDTO">Select Reimbursement Type </label>
+                <select [(ngModel)]="reimbursementTypeId" class="form-control" id="reimbursementTypeDTO"
+                    name="reimbursementTypeDTO">
+                    <option [value]="101">Food</option>
+                    <option [value]="102">Water</option>
+                    <option [value]="103">Laundry</option>
+                    <option [value]="104">Local Travel</option>
+                </select>
+
+            </div>
+            <div class="col-sm-4 mt-3">
+                <label for="invoiceAmount">Enter Invoice Amount </label>
+                <input [(ngModel)]="newRequest.invoiceAmount" class="form-control" type="number" name="invoiceAmount"
+                    placeholder="Invoice Amount" />
+            </div>
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="invoiceNo">Enter Invoice No </label>
+                <input [(ngModel)]="newRequest.invoiceNo" class="form-control" type="string" name="invoiceNo"
+                    id="invoiceNo" placeholder="Invoice No" />
+            </div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="invoiceDate">Select Invoice Date</label>
+                <input [(ngModel)]="newRequest.invoiceDate" class="form-control" type="date" id="invoiceDate"
+                    name="invoiceDate" placeholder="Invoice Date" />
+            </div>
+            <div class="col-sm-4"></div>
+
+
+            <div class="col-sm-4 mt-3">
+                <label for="requestProcessedByEmployeeId">Request Processed By Employee Id </label>
+                <input [(ngModel)]="newRequest.requestProcessedByEmployeeId" class="form-control" type="number"
+                    name="requestProcessedByEmployeeId" placeholder="Request Processed By EmployeeId" />
+            </div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="requestProcessedOn"> Request Processed On</label>
+                <input [(ngModel)]="newRequest.requestProcessedOn" class="form-control" type="date"
+                    id="requestProcessedOn" name="requestProcessedOn" placeholder="Request Processed On Date" />
+            </div>
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="fromTravelDate">From Travel Date</label>
+                <input [(ngModel)]="newRequest.fromTravelDate" class="form-control" type="date" id="fromTravelDate"
+                    name="fromTravelDate" placeholder="From Travel Date" />
+            </div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="toTravelDate">To Travel Date</label>
+                <input [(ngModel)]="newRequest.toTravelDate" class="form-control" type="date" id="toTravelDate"
+                    name="toTravelDate" placeholder="To Travel Date" />
+            </div>
+
+            <div class="col-sm-4 mt-3">
+                <label for="multipartFile">Select PDF file </label>
+                <input (change)="onChange($event)" type="file" class="form-control-file" id="multipartFile"
+                    name="multipartFile">
+            </div>
+        </div>
+        <button class="btn btn-success mt-3"> Submit </button>
+    </form>
+
+</div>

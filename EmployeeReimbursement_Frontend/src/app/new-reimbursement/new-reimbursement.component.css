@@ -1,0 +1,13 @@
+.success-msg{
+    font-size: 20px;
+    font-weight: 800;
+    color: green;
+    font-style: italic;
+}
+
+.error-msg{
+    font-size: 20px;
+    font-weight: 800;
+    color: red;
+    font-style: italic;
+}
