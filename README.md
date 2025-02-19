@@ -1,7 +1,7 @@
 ## Topic - Employee Reimbursement
 ### Description
 #### Programming Language - JAVA
-#### Backend - Spring Boot, Spring Framework, Hibernate, Spring Data JPA, Lombok, ModelMapper
+#### Backend - Spring Boot, Spring Framework, Spring Data JPA, Lombok, ModelMapper
 #### Forntend - Angular15, Bootstrap, Html5, CSS3, Typescript
 #### Tools - Git, Postman, Swagger
 #### Database - H2
